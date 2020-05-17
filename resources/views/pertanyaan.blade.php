@@ -62,7 +62,7 @@
                     <button type="button" class="btn btn-light"
                             data-dismiss="modal">Close
                     </button>
-                    <button type="button" class="btn btn-success updateCustomer">Update
+                    <button type="button" class="btn btn-success updateQuery">Update
                     </button>
                 </div>
             </div>
@@ -101,14 +101,19 @@
 {{--Firebase Tasks--}}
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script> -->
+
 <script>
       // Set the configuration for your app
   // TODO: Replace with your project's config object
   var config = {
-    apiKey: "AIzaSyD4WG-Nl-gTezbHxNPs1LwG0FwLQYdD4nw",
+   apiKey: "AIzaSyD4WG-Nl-gTezbHxNPs1LwG0FwLQYdD4nw",
     authDomain: "testingbotdb-xwxvvy.firebaseapp.com",
     databaseURL: "https://testingbotdb-xwxvvy.firebaseio.com",
-    storageBucket: "testingbotdb-xwxvvy.appspot.com"
+    projectId: "testingbotdb-xwxvvy",
+    storageBucket: "testingbotdb-xwxvvy.appspot.com",
+    messagingSenderId: "143316318232",
+    appId: "1:143316318232:web:9c42b2e5754f0d0d32ab6d"
   };
   firebase.initializeApp(config);
 
@@ -154,7 +159,7 @@
 		        </div>\
 		    </div>\
 		    <div class="form-group">\
-		        <label for="last_name" class="col-md-12 col-form-label">Email</label>\
+		        <label for="last_name" class="col-md-12 col-form-label">Query</label>\
 		        <div class="col-md-12">\
 		            <input id="last_name" type="text" class="form-control" name="email" value="' + values.query + '" required autofocus>\
 		        </div>\
@@ -164,7 +169,7 @@
         });
     });
 
-    $('.updateCustomer').on('click', function () {
+    $('.updateQuery').on('click', function () {
         var values = $(".users-update-record-model").serializeArray();
         var postData = {
             id: values[0].value,

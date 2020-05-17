@@ -34,8 +34,11 @@
         <input type="text" class="form-control" name="responses" placeholder="Responses" required>
     </div> 
     <div class="form-group">
-    <input type="submit" value="Looss lur">
-    </div>     
+    <input type="submit" value="Download" class="btn btn-success">
+    <a href="/admin" class="btn btn-dark">Kembali</a>
+  
+    </div>  
+
 
     </form>
     </div>

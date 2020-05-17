@@ -10,7 +10,7 @@
         <div class="container">
             <div class="card mt-5">
                 <div class="card-header text-center">
-                    Ubah Data mahasiswa
+                    Ubah Data User STIKBOT
                 </div>
                 <div class="card-body">
                     
